@@ -1,0 +1,932 @@
+2018-04-22 04:41:40 [::1][-][-][error][Swift_TransportException] exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials m4sm22916268pfk.151 - gsmtp
+"' in C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php:383
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(243): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\Auth\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'ENTER_EMAIL_ADD...', 'ENTER_PASSWORD')
+#4 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(307): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(118): Swift_Transport_EsmtpTransport->_doHeloCommand()
+#6 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#10 C:\xampp\htdocs\advanced\frontend\models\PasswordResetRequestForm.php(66): yii\mail\BaseMessage->send()
+#11 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(174): frontend\models\PasswordResetRequestForm->sendEmail()
+#12 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2018-04-22 04:41:34 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf' => 'SVU3NlY5Yk4rIwdvAEMvAnA8AE8BChU7GCJmZT1ULQMZJHYOY08MAw=='
+    'PasswordResetRequestForm' => [
+        'email' => 'ardiafire27@gmail.com'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => 'c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM\";}'
+    'PHPSESSID' => 'l6ikq48tgr95hvaafrgl008s05'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM%22%3B%7D; PHPSESSID=l6ikq48tgr95hvaafrgl008s05'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50233'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524364894.888
+    'REQUEST_TIME' => 1524364894
+]
+2018-04-22 04:43:47 [::1][-][-][error][Swift_TransportException] exception 'Swift_TransportException' with message 'Connection could not be established with host localhost [No connection could be made because the target machine actively refused it.
+ #10061]' in C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:265
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 C:\xampp\htdocs\advanced\frontend\models\PasswordResetRequestForm.php(66): yii\mail\BaseMessage->send()
+#7 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(174): frontend\models\PasswordResetRequestForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#12 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2018-04-22 04:43:44 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf' => 'X2kwT3hORlU9HwAWLjQLGWYABzYvfTEgDh5hHBMjCRgPGHF3TTgoGA=='
+    'PasswordResetRequestForm' => [
+        'email' => 'ardiafire27@gmail.com'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => 'c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM\";}'
+    'PHPSESSID' => 'l6ikq48tgr95hvaafrgl008s05'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM%22%3B%7D; PHPSESSID=l6ikq48tgr95hvaafrgl008s05'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50282'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524365024.77
+    'REQUEST_TIME' => 1524365024
+]
+2018-04-22 04:44:12 [::1][-][-][error][Swift_TransportException] exception 'Swift_TransportException' with message 'Connection could not be established with host localhost [No connection could be made because the target machine actively refused it.
+ #10061]' in C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php:265
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\StreamBuffer.php(62): Swift_Transport_StreamBuffer->_establishSocketConnection()
+#1 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(113): Swift_Transport_StreamBuffer->initialize(Array)
+#2 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#6 C:\xampp\htdocs\advanced\frontend\models\PasswordResetRequestForm.php(66): yii\mail\BaseMessage->send()
+#7 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(174): frontend\models\PasswordResetRequestForm->sendEmail()
+#8 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#12 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2018-04-22 04:44:09 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf' => 'X2kwT3hORlU9HwAWLjQLGWYABzYvfTEgDh5hHBMjCRgPGHF3TTgoGA=='
+    'PasswordResetRequestForm' => [
+        'email' => 'ardiafire27@gmail.com'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => 'c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM\";}'
+    'PHPSESSID' => 'l6ikq48tgr95hvaafrgl008s05'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM%22%3B%7D; PHPSESSID=l6ikq48tgr95hvaafrgl008s05'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50288'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524365049.836
+    'REQUEST_TIME' => 1524365049
+]
+2018-04-22 04:46:57 [::1][-][-][error][Swift_TransportException] exception 'Swift_TransportException' with message 'Expected response code 250 but got code "535", with message "535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials b5sm18572414pfc.16 - gsmtp
+"' in C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php:383
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(281): Swift_Transport_AbstractSmtpTransport->_assertResponseCode('535-5.7.8 Usern...', Array)
+#1 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(243): Swift_Transport_AbstractSmtpTransport->executeCommand('RSET\r\n', Array, Array)
+#2 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\Auth\XOAuth2Authenticator.php(55): Swift_Transport_EsmtpTransport->executeCommand('RSET\r\n', Array)
+#3 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php(176): Swift_Transport_Esmtp_Auth_XOAuth2Authenticator->authenticate(Object(Swift_SmtpTransport), 'ardiafire27@gma...', 'Muhammadirfan')
+#4 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\EsmtpTransport.php(307): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#5 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\AbstractSmtpTransport.php(118): Swift_Transport_EsmtpTransport->_doHeloCommand()
+#6 C:\xampp\htdocs\advanced\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Mailer.php(79): Swift_Transport_AbstractSmtpTransport->start()
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2-swiftmailer\Mailer.php(146): Swift_Mailer->send(Object(Swift_Message))
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMailer.php(260): yii\swiftmailer\Mailer->sendMessage(Object(yii\swiftmailer\Message))
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\mail\BaseMessage.php(48): yii\mail\BaseMailer->send(Object(yii\swiftmailer\Message))
+#10 C:\xampp\htdocs\advanced\frontend\models\PasswordResetRequestForm.php(66): yii\mail\BaseMessage->send()
+#11 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(174): frontend\models\PasswordResetRequestForm->sendEmail()
+#12 [internal function]: frontend\controllers\SiteController->actionRequestPasswordReset()
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#14 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('request-passwor...', Array)
+#16 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/request-pa...', Array)
+#17 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#19 {main}
+2018-04-22 04:46:53 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/request-password-reset'
+]
+
+$_POST = [
+    '_csrf' => 'N1pneFItOFlVLFchBFd1FQ4zUAEFHk8sZi02KzlAdxRnKyZAZ1tWFA=='
+    'PasswordResetRequestForm' => [
+        'email' => 'ardiafire27@gmail.com'
+    ]
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => 'c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM\";}'
+    'PHPSESSID' => 'l6ikq48tgr95hvaafrgl008s05'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=c9f0a8e4e8c259be71213e258374d6af93a33946dc5cba97fbed940529969907a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22bv0YVzML9i7yW3wuQwQSkmOMPqA85vnM%22%3B%7D; PHPSESSID=l6ikq48tgr95hvaafrgl008s05'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50312'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Frequest-password-reset'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Frequest-password-reset'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524365213.704
+    'REQUEST_TIME' => 1524365213
+]
+2018-04-22 08:46:23 [::1][-][-][error][yii\base\ErrorException:1] exception 'yii\base\ErrorException' with message 'Call to undefined function common\components\random_int()' in C:\xampp\htdocs\advanced\common\components\Vigenere.php:61
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2018-04-22 08:46:23 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    'PHPSESSID' => '3nff6fjtfvp3i9hlm1h012don5'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; PHPSESSID=3nff6fjtfvp3i9hlm1h012don5; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50251'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524379583.846
+    'REQUEST_TIME' => 1524379583
+]
+2018-04-22 09:00:09 [::1][-][tc7sjvcbt0hbihreji3vv0u4n3][error][yii\base\InvalidParamException] exception 'yii\base\InvalidParamException' with message 'Hash is invalid.' in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Security.php:641
+Stack trace:
+#0 C:\xampp\htdocs\advanced\common\models\User.php(153): yii\base\Security->validatePassword('muhammadirfan', 'xejjahsjtbhjb')
+#1 C:\xampp\htdocs\advanced\common\models\LoginForm.php(45): common\models\User->validatePassword('muhammadirfan')
+#2 [internal function]: common\models\LoginForm->validatePassword('password', NULL)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\InlineValidator.php(69): call_user_func(Array, 'password', NULL)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\validators\Validator.php(243): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), 'password')
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Model.php(356): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), Array)
+#6 C:\xampp\htdocs\advanced\common\models\LoginForm.php(58): yii\base\Model->validate()
+#7 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(90): common\models\LoginForm->login()
+#8 [internal function]: frontend\controllers\SiteController->actionLogin()
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('login', Array)
+#12 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/login', Array)
+#13 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#15 {main}
+2018-04-22 09:00:09 [::1][-][tc7sjvcbt0hbihreji3vv0u4n3][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'SVhsdWpVLnM7OlU3GGNZPAE2Pzg7GlQifmAaBD09ZAkmFCYFLgVKCQ=='
+    'LoginForm' => [
+        'username' => 'tara'
+        'password' => 'muhammadirfan'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'tc7sjvcbt0hbihreji3vv0u4n3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '203'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=tc7sjvcbt0hbihreji3vv0u4n3'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50317'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524380409.114
+    'REQUEST_TIME' => 1524380409
+]
+2018-04-22 09:10:15 [::1][-][pdojb4t6e3pj3a4r9a025angg1][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: token' in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reset-password', Array)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/reset-pass...', Array)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2018-04-22 09:10:15 [::1][-][pdojb4t6e3pj3a4r9a025angg1][info][application] $_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50364'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/index.php/site/reset-password'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PATH_INFO' => '/site/reset-password'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\site\\reset-password'
+    'PHP_SELF' => '/advanced/frontend/web/index.php/site/reset-password'
+    'REQUEST_TIME_FLOAT' => 1524381015.234
+    'REQUEST_TIME' => 1524381015
+]
+2018-04-22 09:10:37 [::1][-][pdojb4t6e3pj3a4r9a025angg1][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/reset-password/3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864".' in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/reset-pass...', Array)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2018-04-22 09:10:37 [::1][-][pdojb4t6e3pj3a4r9a025angg1][info][application] $_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50365'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/index.php/site/reset-password/3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PATH_INFO' => '/site/reset-password/3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\site\\reset-password\\3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864'
+    'PHP_SELF' => '/advanced/frontend/web/index.php/site/reset-password/3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864'
+    'REQUEST_TIME_FLOAT' => 1524381037.69
+    'REQUEST_TIME' => 1524381037
+]
+2018-04-22 09:13:23 [::1][-][pdojb4t6e3pj3a4r9a025angg1][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Missing required parameters: token' in C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Controller.php:93
+Stack trace:
+#0 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(49): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reset-password', Array)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/reset-pass...', Array)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#6 {main}
+2018-04-22 09:13:23 [::1][-][pdojb4t6e3pj3a4r9a025angg1][info][application] $_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50386'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/index.php/site/reset-password'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PATH_INFO' => '/site/reset-password'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\site\\reset-password'
+    'PHP_SELF' => '/advanced/frontend/web/index.php/site/reset-password'
+    'REQUEST_TIME_FLOAT' => 1524381203.503
+    'REQUEST_TIME' => 1524381203
+]
+2018-04-22 09:14:09 [::1][-][pdojb4t6e3pj3a4r9a025angg1][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Password reset token cannot be blank.' in C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php:200
+Stack trace:
+#0 [internal function]: frontend\controllers\SiteController->actionResetPassword('')
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reset-password', Array)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/reset-pass...', Array)
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2018-04-22 09:14:09 [::1][-][pdojb4t6e3pj3a4r9a025angg1][info][application] $_GET = [
+    'token' => ''
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50393'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'token'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php/site/reset-password?token'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PATH_INFO' => '/site/reset-password'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\site\\reset-password'
+    'PHP_SELF' => '/advanced/frontend/web/index.php/site/reset-password'
+    'REQUEST_TIME_FLOAT' => 1524381249.764
+    'REQUEST_TIME' => 1524381249
+]
+2018-04-22 09:14:18 [::1][-][pdojb4t6e3pj3a4r9a025angg1][error][yii\web\HttpException:400] exception 'yii\web\BadRequestHttpException' with message 'Wrong password reset token.' in C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php:200
+Stack trace:
+#0 [internal function]: frontend\controllers\SiteController->actionResetPassword('hasa')
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('reset-password', Array)
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('site/reset-pass...', Array)
+#5 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#7 {main}
+2018-04-22 09:14:18 [::1][-][pdojb4t6e3pj3a4r9a025angg1][info][application] $_GET = [
+    'token' => 'hasa'
+]
+
+$_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50399'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'token=hasa'
+    'REQUEST_URI' => '/advanced/frontend/web/index.php/site/reset-password?token=hasa'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PATH_INFO' => '/site/reset-password'
+    'PATH_TRANSLATED' => 'C:\\xampp\\htdocs\\site\\reset-password'
+    'PHP_SELF' => '/advanced/frontend/web/index.php/site/reset-password'
+    'REQUEST_TIME_FLOAT' => 1524381258.014
+    'REQUEST_TIME' => 1524381258
+]
+2018-04-22 09:15:10 [::1][-][-][error][yii\base\ErrorException:8] exception 'yii\base\ErrorException' with message 'Undefined variable: resetLink' in C:\xampp\htdocs\advanced\frontend\views\site\index.php:15
+Stack trace:
+#0 C:\xampp\htdocs\advanced\frontend\views\site\index.php(15): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 15, Array)
+#1 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(325): require('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('C:\\xampp\\htdocs...', Array)
+#3 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('C:\\xampp\\htdocs...', Array, Object(frontend\controllers\SiteController))
+#4 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(377): yii\base\View->render('index', Array, Object(frontend\controllers\SiteController))
+#5 C:\xampp\htdocs\advanced\frontend\controllers\SiteController.php(75): yii\base\Controller->render('index')
+#6 [internal function]: frontend\controllers\SiteController->actionIndex()
+#7 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#9 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('', Array)
+#10 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('', Array)
+#11 C:\xampp\htdocs\advanced\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 C:\xampp\htdocs\advanced\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2018-04-22 09:15:10 [::1][-][-][info][application] $_COOKIE = [
+    'Phpstorm-f45e28da' => '1c5dcf97-d628-4b04-9507-3638fa781969'
+    'csrftoken' => 'S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO'
+    'style' => 'null'
+    '_csrf' => '1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz\";}'
+    'PHPSESSID' => 'pdojb4t6e3pj3a4r9a025angg1'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'C:/xampp/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'C:/xampp/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://localhost/advanced/frontend/web/index.php/site/reset-password?token=3FY7ID7gM2ZYcKjLtJYWbFvcRmAfvcsP_1524380864'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'Phpstorm-f45e28da=1c5dcf97-d628-4b04-9507-3638fa781969; csrftoken=S8UUYKsWsIQiseCZcL6lNLEZtXgknznJUNkmy7Da4LiL0WGUHvXFVrxr0Dl5nMgO; style=null; _csrf=1a4810a88689061f4cc653872494b6e652d98a07364206a597274a90fbaea149a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rb9Br6wOHnSMQOzQ78vqWhJzoLJpDPdz%22%3B%7D; PHPSESSID=pdojb4t6e3pj3a4r9a025angg1'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\ATI Technologies\\ATI.ACE\\Core-Static;C:\\Program Files\\Java\\jdk1.7.0_45\\bin;C:\\xampp\\php;C:\\Program Files\\Git\\cmd;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Common Files\\Ulead Systems\\MPEG;C:\\Program Files\\nodejs\\;C:\\Ruby24\\bin;C:\\Users\\fan\\AppData\\Roaming\\npm;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32;C:\\Users\\fan\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts;C:\\Program Files\\Microsoft VS Code\\bin'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.RB;.RBW'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.9 (Win32) OpenSSL/1.0.1g PHP/5.5.11'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/xampp/htdocs'
+    'SERVER_ADMIN' => 'fan@localhost'
+    'SCRIPT_FILENAME' => 'C:/xampp/htdocs/advanced/frontend/web/index.php'
+    'REMOTE_PORT' => '50406'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/advanced/frontend/web/index.php'
+    'SCRIPT_NAME' => '/advanced/frontend/web/index.php'
+    'PHP_SELF' => '/advanced/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524381310.59
+    'REQUEST_TIME' => 1524381310
+]
